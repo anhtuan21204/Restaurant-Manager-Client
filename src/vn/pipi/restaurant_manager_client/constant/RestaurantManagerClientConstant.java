@@ -3,7 +3,7 @@ package vn.pipi.restaurant_manager_client.constant;
 public class RestaurantManagerClientConstant {
 	// Database
 	public static final String DBName = "restaurant_manager";
-	public static final String DBPATH = "restaurant_manager";
+	public static final String DBPATH = "/data/data/vn.pipi.restaurant_manager_client/databases/";
 	public static final int DATABASE_VERSION = 1;
 	
 	public static final String TABLE_EMPLOYEE = "res_employee";

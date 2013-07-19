@@ -36,16 +36,25 @@ public class DatabaseHelper{
 	//---------------- class OpenHelper ------------------
     private static class OpenHelper extends SQLiteOpenHelper {
     	
-    	String createDB = "CREATE TABLE " + RestaurantManagerClientConstant.TABLE_EMPLOYEE + "("
-    			+ RestaurantManagerClientConstant.COL_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, username TEXT, fullname TEXT);";
-
-        public OpenHelper(Context context) {
+    	String createDB = "CREATE TABLE `res_employee` (`_id` INTEGER PRIMARY KEY AUTOINCREMENT, `username` TEXT, `fullname` TEXT);"
+    					+ "CREATE TABLE `res_floor` (`_id` integer primary key AUTOINCREMENT, `name` text NOT NULL);"
+    					+ "CREATE TABLE `res_table` (`_id` integer primary key AUTOINCREMENT, `floor_id` text NOT NULL, `` integer not null);"
+    					+ "CREATE TABLE `res_kind_of_food` (`_id` integer primary key AUTOINCREMENT, `name` text NOT NULL);"
+						+ "CREATE TABLE `res_food` (`_id` integer primary key AUTOINCREMENT, `name` text NOT NULL, `kind_id` integer not null, `image` text, `price` integer not null);";
+        String insertFloor = "INSERT INTO `res_floor` (`id`, `name`) VALUES(1, 'Ground Floor'),(2, '1st Floor');";
+    	String insertTable = "INSERT INTO `res_table` (`id`, `name`, `floor_id`) VALUES(1, '101', 1),(2, '102', 1),(3, '201', 2),(4, '103', 1),(5, '104', 1),(6, '202', 2),(7, '105', 1),(8, '106', 1);";
+    	
+    	
+    	
+    	public OpenHelper(Context context) {
             super(context, RestaurantManagerClientConstant.DBName, null, RestaurantManagerClientConstant.DATABASE_VERSION);
         }
  
         @Override
         public void onCreate(SQLiteDatabase arg0) {
             arg0.execSQL(createDB);
+            arg0.execSQL(insertFloor);
+            arg0.execSQL(insertTable);
         }
         
         @Override
