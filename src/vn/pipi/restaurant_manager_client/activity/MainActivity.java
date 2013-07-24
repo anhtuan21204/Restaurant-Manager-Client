@@ -1,13 +1,10 @@
 package vn.pipi.restaurant_manager_client.activity;
 
 import vn.pipi.restaurant_manager_client.R;
-import vn.pipi.restaurant_manager_client.R.layout;
-import vn.pipi.restaurant_manager_client.R.menu;
 import android.os.Bundle;
-import android.app.Activity;
-import android.view.Menu;
+import android.support.v4.app.FragmentActivity;
 
-public class MainActivity extends Activity {
+public class MainActivity extends FragmentActivity implements ListFragment.OnItemSelectedListener{
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -16,10 +13,11 @@ public class MainActivity extends Activity {
 	}
 
 	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.main, menu);
-		return true;
+	public void onFloorSelected(int floorID) {
+		ItemFragment item = (ItemFragment) getFragmentManager().findFragmentById(R.id.itemFragment);
+		if(item != null && item.isInLayout()){
+			item.displayTables(this, floorID);
+		}		
 	}
 
 }

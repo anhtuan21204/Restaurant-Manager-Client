@@ -5,12 +5,14 @@ import org.json.JSONObject;
 import vn.pipi.restaurant_manager_client.R;
 import vn.pipi.restaurant_manager_client.constant.RestaurantManagerClientConstant;
 import vn.pipi.restaurant_manager_client.dao.EmployeeDAO;
+import vn.pipi.restaurant_manager_client.helper.DatabaseHelper;
 import vn.pipi.restaurant_manager_client.helper.LoginFunction;
 import android.os.Bundle;
 import android.os.Handler;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.database.sqlite.SQLiteException;
 import android.util.Log;
 import android.view.Menu;
@@ -29,6 +31,10 @@ public class LoginActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_login);
+		//Create DB
+		DatabaseHelper db = new DatabaseHelper(this);
+		//db.open();
+		//db.close();
 		
 		btnLogin = (Button) findViewById(R.id.btnLogin);
 		txtUsername = (EditText) findViewById(R.id.txtUsername);
@@ -63,6 +69,9 @@ public class LoginActivity extends Activity {
 					            			handler.post(new Runnable(){
 					            				public void run(){
 					            					displayToast(context, "Login Successful");
+					            					Intent i = new Intent(context, MainActivity.class);
+					            					startActivity(i);
+					            					finish();
 					            				}
 				            				});
 					            		}catch(SQLiteException ex){

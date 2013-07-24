@@ -12,8 +12,12 @@ public class EmployeeDAO {
 		ContentValues cv = new ContentValues();
 		cv.put("username", username);
 		cv.put("fullname", fullname);
+		
 		dbHelper.open();
+		String query = "delete from " + RestaurantManagerClientConstant.TABLE_EMPLOYEE;
+		dbHelper.execSQL(query);
 		dbHelper.insertData(RestaurantManagerClientConstant.TABLE_EMPLOYEE, cv);
 		dbHelper.close();
+		
 	}
 }

@@ -8,6 +8,7 @@ public class RestaurantManagerClientConstant {
 	
 	public static final String TABLE_EMPLOYEE = "res_employee";
 	public static final String TABLE_FLOOR = "res_floor";
+	public static final String TABLE_TABLE = "res_table";
 	
 	public static final String COL_ID = "_id";
 	

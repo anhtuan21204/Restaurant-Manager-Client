@@ -24,22 +24,18 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity
-            android:name="vn.pipi.restaurant_manager_client.ItemListActivity"
-            android:label="@string/title_item_list"
-            android:screenOrientation="landscape" >
-        </activity>
-        <activity
-            android:name="vn.pipi.restaurant_manager_client.ItemDetailActivity"
-            android:label="@string/title_item_detail" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".ItemListActivity" />
-        </activity>
+        </activity>        
         <activity
             android:name="vn.pipi.restaurant_manager_client.activity.MainActivity"
             android:label="@string/title_activity_main" >
+        </activity>
+        <activity
+            android:name="vn.pipi.restaurant_manager_client.activity.ListFragment"
+            android:label="@string/title_activity_list" >
+        </activity>
+        <activity
+            android:name="vn.pipi.restaurant_manager_client.activity.ItemFragment"
+            android:label="@string/title_activity_item" >
         </activity>
     </application>
 

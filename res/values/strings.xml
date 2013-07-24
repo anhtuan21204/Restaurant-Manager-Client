@@ -9,5 +9,10 @@
     <string name="title_item_list">Items</string>
     <string name="title_item_detail">Item Detail</string>
     <string name="title_activity_main">Restaurant Manager</string>
+    <string name="title_activity_list">ListActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="gFloor">Ground Floor</string>
+    <string name="firstFloor">First Floor</string>
+    <string name="title_activity_item">ItemActivity</string>
 
 </resources>
