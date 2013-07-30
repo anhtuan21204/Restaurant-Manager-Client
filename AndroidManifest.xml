@@ -24,7 +24,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>        
+        </activity>
         <activity
             android:name="vn.pipi.restaurant_manager_client.activity.MainActivity"
             android:label="@string/title_activity_main" >
@@ -36,6 +36,10 @@
         <activity
             android:name="vn.pipi.restaurant_manager_client.activity.ItemFragment"
             android:label="@string/title_activity_item" >
+        </activity>
+        <activity
+            android:name="vn.pipi.restaurant_manager_client.activity.MenuActivity"
+            android:label="@string/title_activity_menu" >
         </activity>
     </application>
 

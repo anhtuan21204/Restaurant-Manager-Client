@@ -14,5 +14,10 @@
     <string name="gFloor">Ground Floor</string>
     <string name="firstFloor">First Floor</string>
     <string name="title_activity_item">ItemActivity</string>
+    <string name="newOrder">Gọi món</string>
+    <string name="ordered">Món đã gọi</string>
+    <string name="checkBill">Thanh toán</string>
+    <string name="cancel">Hủy</string>
+    <string name="title_activity_menu">Thực đơn</string>
 
 </resources>

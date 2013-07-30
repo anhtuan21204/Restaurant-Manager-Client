@@ -1,0 +1,18 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 
+    android:orientation="horizontal">
+    
+    <fragment
+        android:id="@+id/fragmentMenu"
+        android:layout_width="161dp"
+        android:layout_height="match_parent"
+        class="vn.pipi.restaurant_manager_client.fragment.MenuFragment" />
+
+    <fragment
+        android:id="@+id/fragmentFood"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        class="vn.pipi.restaurant_manager_client.fragment.FoodFragment" />
+    
+</LinearLayout>

@@ -163,47 +163,66 @@ public final class R {
         public static final int activity_vertical_margin=0x7f050001;
     }
     public static final class drawable {
-        public static final int empty_table=0x7f020000;
-        public static final int ic_launcher=0x7f020001;
-        public static final int table=0x7f020002;
+        public static final int border_item=0x7f020000;
+        public static final int border_list=0x7f020001;
+        public static final int empty_table=0x7f020002;
+        public static final int ic_launcher=0x7f020003;
+        public static final int table=0x7f020004;
     }
     public static final class id {
-        public static final int FirstFloor=0x7f090002;
-        public static final int GFloor=0x7f090001;
-        public static final int action_settings=0x7f09000a;
-        public static final int btnLogin=0x7f090007;
-        public static final int gvTable=0x7f090000;
-        public static final int itemFragment=0x7f090009;
-        public static final int listFragment=0x7f090008;
-        public static final int textView1=0x7f090006;
-        public static final int textView2=0x7f090004;
-        public static final int txtPassword=0x7f090003;
-        public static final int txtUsername=0x7f090005;
+        public static final int action_settings=0x7f090011;
+        public static final int btnCancelOrder=0x7f09000e;
+        public static final int btnCheckBill=0x7f09000d;
+        public static final int btnLogin=0x7f090006;
+        public static final int btnNewOrder=0x7f09000b;
+        public static final int btnOrdered=0x7f09000c;
+        public static final int fragmentFloor=0x7f090007;
+        public static final int fragmentFood=0x7f09000a;
+        public static final int fragmentMenu=0x7f090009;
+        public static final int fragmentTable=0x7f090008;
+        public static final int gridTable=0x7f090000;
+        public static final int listFood=0x7f090010;
+        public static final int listMenu=0x7f090001;
+        public static final int relativeLayout1=0x7f09000f;
+        public static final int textView1=0x7f090005;
+        public static final int textView2=0x7f090003;
+        public static final int txtPassword=0x7f090002;
+        public static final int txtUsername=0x7f090004;
     }
     public static final class layout {
         public static final int activity_item=0x7f030000;
         public static final int activity_list=0x7f030001;
         public static final int activity_login=0x7f030002;
         public static final int activity_main=0x7f030003;
-        public static final int simple1=0x7f030004;
+        public static final int activity_menu=0x7f030004;
+        public static final int dialog_order=0x7f030005;
+        public static final int gridview_row=0x7f030006;
+        public static final int listview_food=0x7f030007;
+        public static final int listview_menu=0x7f030008;
     }
     public static final class menu {
         public static final int item=0x7f080000;
         public static final int list=0x7f080001;
         public static final int login=0x7f080002;
         public static final int main=0x7f080003;
+        public static final int menu=0x7f080004;
     }
     public static final class string {
         public static final int action_settings=0x7f060001;
         public static final int app_name=0x7f060000;
+        public static final int cancel=0x7f060010;
+        public static final int checkBill=0x7f06000f;
         public static final int firstFloor=0x7f06000b;
         public static final int gFloor=0x7f06000a;
         public static final int hello_world=0x7f060009;
         public static final int login=0x7f060004;
+        public static final int newOrder=0x7f06000d;
+        public static final int ordered=0x7f06000e;
         public static final int password=0x7f060003;
         public static final int title_activity_item=0x7f06000c;
         public static final int title_activity_list=0x7f060008;
         public static final int title_activity_main=0x7f060007;
+        public static final int title_activity_menu=0x7f060011;
         public static final int title_item_detail=0x7f060006;
         public static final int title_item_list=0x7f060005;
         public static final int username=0x7f060002;

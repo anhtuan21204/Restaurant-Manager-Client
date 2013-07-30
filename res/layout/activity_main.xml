@@ -4,17 +4,15 @@
     android:orientation="horizontal">
 
     <fragment
-        android:id="@+id/listFragment"
-        android:name="android.app.DialogFragment"
+        android:id="@+id/fragmentFloor"
         android:layout_width="161dp"
         android:layout_height="match_parent" 
-        class="vn.pipi.restaurant_manager_client.activity.ListFragment"/>
+        class="vn.pipi.restaurant_manager_client.fragment.LeftFragment"/>
 
     <fragment
-        android:id="@+id/itemFragment"
-        android:name="android.app.ListFragment"
+        android:id="@+id/fragmentTable"
         android:layout_width="wrap_content"
         android:layout_height="match_parent" 
-        class="vn.pipi.restaurant_manager_client.activity.ItemFragment"/>
+        class="vn.pipi.restaurant_manager_client.fragment.RightFragment"/>
 
 </LinearLayout>

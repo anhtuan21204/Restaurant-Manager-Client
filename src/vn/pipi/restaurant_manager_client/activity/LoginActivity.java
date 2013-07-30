@@ -33,8 +33,8 @@ public class LoginActivity extends Activity {
 		setContentView(R.layout.activity_login);
 		//Create DB
 		DatabaseHelper db = new DatabaseHelper(this);
-		//db.open();
-		//db.close();
+		db.open();
+		db.close();
 		
 		btnLogin = (Button) findViewById(R.id.btnLogin);
 		txtUsername = (EditText) findViewById(R.id.txtUsername);
@@ -53,8 +53,7 @@ public class LoginActivity extends Activity {
 				final String password = txtPass.getText().toString();
 				if(username.trim().length() == 0 || password.trim().length() == 0){
 					progressDialog.dismiss();
-					Toast toast = Toast.makeText(context, "Enter username and password!", Toast.LENGTH_LONG);
-					toast.show();
+					displayToast(context, "Username or password incorrect!");    				
 				}else{
 					Thread t = new Thread() {  
 			            public void run() {  
@@ -68,7 +67,7 @@ public class LoginActivity extends Activity {
 					            			EmployeeDAO.insertEmployee(context, username, jsonUser.getString("fullname"));
 					            			handler.post(new Runnable(){
 					            				public void run(){
-					            					displayToast(context, "Login Successful");
+					            					//displayToast(context, "Login Successful");
 					            					Intent i = new Intent(context, MainActivity.class);
 					            					startActivity(i);
 					            					finish();
