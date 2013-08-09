@@ -59,8 +59,8 @@ public class LoginActivity extends Activity {
 			            public void run() {  
 			            	try{
 			            		JSONObject jsonResponse = LoginFunction.loginUser(username, password);
-			            		Log.d("doLogin", jsonResponse.toString());
-			            		if (jsonResponse.getString(RestaurantManagerClientConstant.KEY_SUCCESS) != null) {									
+			            		//Log.d("doLogin", jsonResponse.toString());
+			            		if (jsonResponse!=null && jsonResponse.getString(RestaurantManagerClientConstant.KEY_SUCCESS) != null) {									
 									if(Integer.parseInt(jsonResponse.getString(RestaurantManagerClientConstant.KEY_SUCCESS)) == 1){
 										JSONObject jsonUser = jsonResponse.getJSONObject("user");
 					            		try{
@@ -74,7 +74,8 @@ public class LoginActivity extends Activity {
 					            				}
 				            				});
 					            		}catch(SQLiteException ex){
-					            			Log.d("DB", "insert employee" + ex.toString());
+					            			//Log.d("DB", "insert employee" + ex.toString());
+						            		progressDialog.dismiss();
 					            		}
 									}else{
 										handler.post(new Runnable(){
@@ -103,6 +104,11 @@ public class LoginActivity extends Activity {
 			}
 		});
 	}
+	/***
+	 * 
+	 * @param context
+	 * @param text
+	 */
 	private void displayToast(Context context, String text){
 		Toast toast = Toast.makeText(context, text, Toast.LENGTH_LONG);
 		toast.show();

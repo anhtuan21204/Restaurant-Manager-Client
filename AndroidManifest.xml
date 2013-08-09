@@ -41,6 +41,10 @@
             android:name="vn.pipi.restaurant_manager_client.activity.MenuActivity"
             android:label="@string/title_activity_menu" >
         </activity>
+        <activity
+            android:name="vn.pipi.restaurant_manager_client.activity.PreviewOrderActivity"
+            android:label="@string/title_activity_menu" >
+        </activity>
     </application>
 
 </manifest>

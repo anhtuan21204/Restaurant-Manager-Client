@@ -1,18 +1,23 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"    
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent" 
-    android:orientation="horizontal">
+    android:layout_height="fill_parent"
+    android:orientation="horizontal" >
 
-    <fragment
-        android:id="@+id/fragmentFloor"
-        android:layout_width="161dp"
+    <ListView
+        android:id="@+id/listFloor"
+        android:layout_width="118dp"
         android:layout_height="match_parent" 
-        class="vn.pipi.restaurant_manager_client.fragment.LeftFragment"/>
+        android:background="@drawable/border_list">
 
-    <fragment
-        android:id="@+id/fragmentTable"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent" 
-        class="vn.pipi.restaurant_manager_client.fragment.RightFragment"/>
+    </ListView>
+
+    <GridView
+        android:id="@+id/gridTable"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:numColumns="3" 
+        tools:listitem="@layout/gridview_item">
+    </GridView>
 
 </LinearLayout>

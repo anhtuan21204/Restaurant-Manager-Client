@@ -1,18 +1,70 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent" 
-    android:orientation="horizontal">
-    
-    <fragment
-        android:id="@+id/fragmentMenu"
-        android:layout_width="161dp"
-        android:layout_height="match_parent"
-        class="vn.pipi.restaurant_manager_client.fragment.MenuFragment" />
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
 
-    <fragment
-        android:id="@+id/fragmentFood"
-        android:layout_width="wrap_content"
+	<RelativeLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="30dp"
+	    android:background="@color/DeepSkyBlue" >
+
+		<Button
+		    android:id="@+id/btnPreviewOrder"
+		    style="?android:attr/borderlessButtonStyle"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentRight="true"
+		    android:layout_centerVertical="true"
+		    android:layout_marginRight="14dp"
+		    android:background="@color/DeepSkyBlue"
+		    android:text="@string/completeOrder"
+		    android:textSize="12sp" />
+
+		<EditText
+		    android:id="@+id/editSearchfood"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentLeft="true"
+		    android:layout_alignParentTop="true"
+		    android:ems="10"
+		    android:hint="@string/hintSearchFood" 
+		    android:textSize="12sp">
+
+		    <requestFocus />
+		</EditText>
+
+		<View
+		    android:layout_width="1dp"
+		    android:layout_height="30dp"
+		    android:layout_marginTop="2dp"
+		    android:layout_marginBottom="2dp"
+		    android:layout_centerVertical="true"
+		    android:layout_marginRight="16dp"
+		    android:layout_toLeftOf="@+id/btnPreviewOrder"
+		    android:background="@color/SkyBlue" />
+	    
+	</RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        class="vn.pipi.restaurant_manager_client.fragment.FoodFragment" />
-    
+        android:baselineAligned="false"
+        android:orientation="horizontal" >
+	
+	    <ListView
+	        android:id="@+id/listMenu"
+	        android:layout_width="150dp"
+	        android:layout_height="match_parent"
+	        android:background="@drawable/border_list" >
+	    </ListView>
+	
+	    <ListView
+	        android:id="@+id/listFood"
+	        android:layout_width="0dp"
+	        android:layout_height="match_parent"
+	        android:layout_weight="1"
+	        tools:listitem="@layout/food_item">
+	    </ListView>
+    </LinearLayout>
 </LinearLayout>

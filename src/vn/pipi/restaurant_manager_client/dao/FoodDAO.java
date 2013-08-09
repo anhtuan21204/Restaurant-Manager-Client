@@ -13,7 +13,7 @@ public class FoodDAO {
 	public static ArrayList<FoodDTO> geFoodFromKind(Context context, int kindId){
 		ArrayList<FoodDTO> foods = new ArrayList<FoodDTO>();
 		DatabaseHelper dbHelper = new DatabaseHelper(context);
-		String sql = "select * from " + RestaurantManagerClientConstant.TABLE_KIND_OF_FOOD +
+		String sql = "select * from " + RestaurantManagerClientConstant.TABLE_FOOD +
 						" where kind_id=?";
 		String[] str = {String.valueOf(kindId)};
 		dbHelper.open();
@@ -35,5 +35,30 @@ public class FoodDAO {
 		}
 		
 		return foods;
+	}
+	
+	public static FoodDTO getFoodDTOFromID(Context context, int foodId){
+		FoodDTO food = null;
+		DatabaseHelper dbHelper = new DatabaseHelper(context);
+		String sql = "select * from " + RestaurantManagerClientConstant.TABLE_FOOD +
+						" where _id=?";
+		String[] str = {String.valueOf(foodId)};
+		dbHelper.open();
+		try{
+			Cursor cursor = dbHelper.rawQuery(sql, str);			
+			int kindIndex = cursor.getColumnIndex("kind_id");
+			int nameIndex = cursor.getColumnIndex("name");					
+			int priceIndex = cursor.getColumnIndex("price");
+			int imageIndex = cursor.getColumnIndex("image");	
+			for(cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()){				
+				food = new FoodDTO(foodId, cursor.getString(nameIndex), cursor.getInt(kindIndex), cursor.getString(imageIndex), cursor.getInt(priceIndex));
+			}
+			cursor.close();
+		}catch(Exception e){
+			Log.d("Get Food:", e.toString());
+		}finally{
+			dbHelper.close();
+		}
+		return food;
 	}
 }

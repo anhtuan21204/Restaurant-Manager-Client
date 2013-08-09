@@ -11,11 +11,11 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-public class GridViewAdapter extends BaseAdapter{
+public class TableAdapter extends BaseAdapter{
 	private ArrayList<String> listTable;
 	private Activity activity;
 	
-	public GridViewAdapter(Activity activity,ArrayList<String> listTable) {
+	public TableAdapter(Activity activity,ArrayList<String> listTable) {
 		super();
 		this.listTable = listTable;
 		this.activity = activity;
@@ -49,9 +49,9 @@ public class GridViewAdapter extends BaseAdapter{
 		if(convertView==null)
 		{
 			view = new ViewHolder();
-			convertView = inflator.inflate(R.layout.gridview_row, null);
+			convertView = inflator.inflate(R.layout.gridview_item, null);
 			
-			view.txtViewTitle = (TextView) convertView.findViewById(R.id.textView1);
+			view.txtViewTitle = (TextView) convertView.findViewById(R.id.textNameTable);
 			
 			convertView.setTag(view);
 		}

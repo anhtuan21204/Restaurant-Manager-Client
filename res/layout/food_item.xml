@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/foodItem"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+
+    <ImageView
+        android:id="@+id/imageFood"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/image_of_food"
+        android:src="@drawable/ic_launcher" 
+		android:paddingTop="20dp"
+		android:paddingRight="10dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <TextView
+            android:id="@+id/nameFood"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:lines="1"
+            android:text="@string/hello_world"
+            android:textColor="@color/Aquamarine"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnAddFood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nameFood"
+            android:onClick="addFoodOnClickHandler"
+            android:text="@string/addFood" />
+
+        <TextView
+            android:id="@+id/txtView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/btnAddFood"
+            android:layout_marginLeft="29dp"
+            android:layout_toRightOf="@+id/btnAddFood"
+            android:text="@string/price" />
+
+        <TextView
+            android:id="@+id/priceFood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/txtView1"
+            android:layout_alignBottom="@+id/txtView1"
+            android:layout_toRightOf="@+id/txtView1"
+            android:text="@string/hello_world" />
+
+    </RelativeLayout>
+	
+</LinearLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tableItem"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/border_item"
+    android:padding="5dp" >
+    
+	<TextView
+	    android:id="@+id/textNameTable"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_centerHorizontal="true"
+	    android:layout_marginTop="2dp"
+	    android:ellipsize="marquee"
+	    android:textSize="18sp" >
+</TextView>
+	
+	
+</RelativeLayout>

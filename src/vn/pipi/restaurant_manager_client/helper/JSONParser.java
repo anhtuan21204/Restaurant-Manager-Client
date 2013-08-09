@@ -36,11 +36,16 @@ public class JSONParser {
 			HttpEntity httpEntity = httpResponse.getEntity();
 			is = httpEntity.getContent();
 		} catch (UnsupportedEncodingException e) {
-			e.printStackTrace();
+			Log.d("EncodingException",e.toString());
+			return null;
 		} catch (ClientProtocolException e) {
-			e.printStackTrace();
+			Log.d("ClientProtocolException",e.toString());
+			return null;
 		} catch (IOException e) {
-			e.printStackTrace();
+			Log.d("IOException",e.toString());
+			return null;
+		} catch (Exception e) {
+			return null;
 		}
 
 		try {
@@ -54,12 +59,14 @@ public class JSONParser {
 			json = sb.toString();
 		} catch (Exception e) {
 			Log.d(TAG, "Error converting result " + e.toString());
+			return null;
 		}
 		
 		try {
 			jObj = new JSONObject(json);
 		} catch (JSONException e) {
 			Log.d(TAG, "Error parsing data " + e.toString());
+			return null;
 		}
 		return jObj;
 	}

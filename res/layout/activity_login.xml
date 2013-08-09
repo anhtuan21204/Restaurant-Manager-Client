@@ -12,18 +12,18 @@
         android:id="@+id/txtPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/textView2"
+        android:layout_alignBottom="@+id/textPass"
         android:layout_alignLeft="@+id/txtUsername"
         android:layout_alignRight="@+id/txtUsername"
         android:ems="10"
         android:inputType="textPassword" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textPass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView1"
-        android:layout_below="@+id/textView1"
+        android:layout_alignLeft="@+id/textUsername"
+        android:layout_below="@+id/textUsername"
         android:layout_marginTop="34dp"
         android:text="@string/password"
         android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -38,7 +38,7 @@
         android:text="@string/login" />
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/textUsername"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -52,8 +52,8 @@
         android:id="@+id/txtUsername"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textView1"
-        android:layout_alignBottom="@+id/textView1"
+        android:layout_alignBaseline="@+id/textUsername"
+        android:layout_alignBottom="@+id/textUsername"
         android:layout_alignLeft="@+id/btnLogin"
         android:ems="10"
         android:hint="@string/username" >

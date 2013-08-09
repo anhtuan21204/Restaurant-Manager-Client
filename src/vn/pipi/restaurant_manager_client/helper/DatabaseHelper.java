@@ -83,7 +83,7 @@ public class DatabaseHelper{
         }
         
         private void insertFloor(SQLiteDatabase db){
-        	FloorDTO[] floors = {new FloorDTO(1, "Ground Floor"), new FloorDTO(2, "First Floor")};        	
+        	FloorDTO[] floors = {new FloorDTO(1, "Tầng trệt"), new FloorDTO(2, "Tầng 1")};        	
        		
         	ContentValues values = new ContentValues();
         	int row = 0;
